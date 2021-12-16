@@ -27,8 +27,8 @@ pub fn decode_packets<I: Iterator<Item = u64>>(itr: &mut Peekable<I>) -> Vec<Pac
 
 pub fn decode_packet<I: Iterator<Item = u64>>(itr: &mut Peekable<I>) -> Option<Packet> {
     // get version digits
-    let version = extend_number(0, itr, 3)?;
-    let type_id = extend_number(0, itr, 3)?;
+    let version = 0;
+    let type_id = 1;
     return operator_packet(version, type_id, itr);
 }
 
